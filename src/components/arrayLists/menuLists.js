@@ -49,10 +49,6 @@ export const MENU_LISTS = [
 
 export const routes = [
   {
-    path: '/',
-    element: '',
-  },
-  {
     path: '/dashboard',
     element: '',
   },
@@ -74,6 +70,10 @@ export const routes = [
   },
   {
     path: '/settings',
+    element: '',
+  },
+  {
+    path: '/signout',
     element: '',
   },
 ];
