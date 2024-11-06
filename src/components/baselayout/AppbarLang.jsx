@@ -45,10 +45,9 @@ const AppbarLang = () => {
     fetchCountriesData()
   }, [])
 
-  console.log(selectedCountry);
 
   return (
-    <div className='appbar-dropdown lang-dropdown w-30 h-10 relative'>
+    <div className='appbar-dropdown lang-dropdown w-30 h-10 relative px-2'>
       <div className="drop-selected w-full h-full px-1 py-3 flex items-center gap-2" onClick={handleDropListEnable}>
         <div className='drop-selected-img w-6 h-6 overflow-hidden rounded-full'>
           <img src={selectedCountry?.flag} alt="" className='w-full h-full object-cover' />
@@ -61,10 +60,18 @@ const AppbarLang = () => {
 
 
       {/* Drop Down Countries */}
-      <div className={`drop-list absolute top-full w-full left-0 py-2 px-0 dark:bg-gray-950 dark:shadow-[0_0.125rem_0.25rem_rgba(255,255,255,0.3)] bg-white shadow-[0_0.125rem_0.25rem_rgba(165,163,174,0.3)] text-neutral-950 rounded-sm transition ease-in-out delay-300 z-10
+      <div className={`drop-list absolute top-full w-full left-0 py-2 dark:bg-neutral-950 dark:shadow-[0_0.125rem_0.25rem_rgba(255,255,255,0.3)] bg-white shadow-[0_0.125rem_0.25rem_rgba(165,163,174,0.3)] text-neutral-950 rounded-sm transition ease-in-out delay-300 z-10
         ${isDropListOpen ? '' : 'hidden'}`}>
 
-        <div className="drop-list-wrapper scrollbar max-h-52 overflow-y-scroll py-2 px-2">
+        <div className="drop-list-wrapper scrollbar max-h-52 overflow-y-auto mr-2
+        [&::-webkit-scrollbar]:w-2
+        [&::-webkit-scrollbar-track]:rounded-full
+      [&::-webkit-scrollbar-track]:bg-gray-100
+        [&::-webkit-scrollbar-thumb]:rounded-full
+      [&::-webkit-scrollbar-thumb]:bg-gray-300
+      dark:[&::-webkit-scrollbar-track]:bg-neutral-700
+      dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500
+        ">
           {
             countries?.length > 0 ? (
               countries?.map((country)=>{
@@ -72,7 +79,7 @@ const AppbarLang = () => {
                   const langKey = Object.keys(country?.languages)[0]
 
                   return (
-                    <div key={country.name.common} className='drop-item flex items-center gap-3 hover:bg-neutral-100 pl-2 py-1.5 px-0 transition ease-in-out delay-100 hover:dark:bg-neutral-700 cursor-pointer' onClick={()=>{
+                    <div key={country.name.common} className='drop-item flex items-center gap-3 hover:bg-neutral-100 pl-2 py-1.5 px-0 transition ease-in-out delay-100 hover:dark:bg-neutral-800 cursor-pointer' onClick={()=>{
                       countrySelectedHandler(
                         country?.name?.common,
                         country?.flags?.png,

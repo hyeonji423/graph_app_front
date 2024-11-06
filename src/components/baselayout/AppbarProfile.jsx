@@ -4,7 +4,7 @@ import { Icons } from '../../assets/icons'
 
 const AppbarProfile = () => {
   return (
-    <div className='appbar-profile profile-dropdown cursor-pointer'>
+    <div className='appbar-profile profile-dropdown cursor-pointer hidden lg:block'>
       <div className='drop-info flex items-center gap-x-2'>
         <div className="drop-info-img h-8 w-8 overflow-hidden rounded-full">
           <img src={Images.ProfileImage} alt="" className='w-full h-full object-cover' />

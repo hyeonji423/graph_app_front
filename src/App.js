@@ -2,6 +2,7 @@ import './App.css';
 import Appbar from './components/baselayout/Appbar';
 import AppbarProfile from './components/baselayout/AppbarProfile';
 import Sidebar from './components/baselayout/Sidebar';
+import DashboardScreen from './components/dashboard/DashboardScreen';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Sidebar/>
         <div className='contents-wrapper w-full'>
           <Appbar/>
+          <DashboardScreen/>
         </div>
       </div>
     </div>

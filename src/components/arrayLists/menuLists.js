@@ -49,7 +49,7 @@ export const MENU_LISTS = [
 
 export const routes = [
   {
-    path: '/dashboard',
+    path: '/',
     element: '',
   },
   {
