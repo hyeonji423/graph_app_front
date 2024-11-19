@@ -29,7 +29,7 @@ const Appbar = () => {
                 <span className='input-icon w-5 flex place-content-center'>
                   <img src={Icons.SearchBlue} alt="input icon" />
                 </span>
-                <input type="text" placeholder='Search here ...' className='border-none outline-none text-[15px] px-3 bg-neutral-300 dark:bg-neutral-800 text-neutral-950 dark:text-white placeholder-neutral-800 dark:placeholder-neutral-500 min-w-20 lg:min-w-80 sm:min-w-60'/>
+                <input type="text" placeholder='Search here ...' className='border-none outline-none text-[15px] px-3 bg-neutral-300 dark:bg-neutral-800 text-neutral-950 dark:text-white placeholder-neutral-800 dark:placeholder-neutral-500 min-w-20 lg:w-80 sm:w-60'/>
               </div>
             </form>
           </div>
